@@ -6,6 +6,9 @@ target 'Riff' do
   use_frameworks!
 
   # Pods for Riff
+  
+  pod 'Firebase/Core'
+
 
   target 'RiffTests' do
     inherit! :search_paths
