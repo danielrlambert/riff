@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		651D8CEFBD1C07855F8431B9 /* Pods_Riff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC854FC990DDDAAB2DFCB76D /* Pods_Riff.framework */; };
 		6521CB3C384F1CC1E905CEED /* Pods_RiffUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61731B42BE75E252F2CEB1F9 /* Pods_RiffUITests.framework */; };
+		9A78FB57210F3B7100D680AA /* Brothers-Lands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A78FB56210F3B7100D680AA /* Brothers-Lands.ttf */; };
+		9A78FB592110454D00D680AA /* YourGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB582110454D00D680AA /* YourGifVC.swift */; };
+		9A78FB5B2110456100D680AA /* RiffsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB5A2110456100D680AA /* RiffsVC.swift */; };
 		AF3A3528210B5EB300BB7E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */; };
-		AF3A352A210B5EB300BB7E9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A3529210B5EB300BB7E9D /* ViewController.swift */; };
+		AF3A352A210B5EB300BB7E9D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A3529210B5EB300BB7E9D /* HomeVC.swift */; };
 		AF3A352D210B5EB300BB7E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3A352B210B5EB300BB7E9D /* Main.storyboard */; };
 		AF3A352F210B5EB300BB7E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3A352E210B5EB300BB7E9D /* Assets.xcassets */; };
 		AF3A3532210B5EB300BB7E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3A3530210B5EB300BB7E9D /* LaunchScreen.storyboard */; };
@@ -43,10 +46,13 @@
 		1D2A18C37A5A1C794120DE50 /* Pods-RiffUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiffUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiffUITests/Pods-RiffUITests.release.xcconfig"; sourceTree = "<group>"; };
 		490A13DC411F7A26E0CB8BFB /* Pods-RiffUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiffUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiffUITests/Pods-RiffUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		61731B42BE75E252F2CEB1F9 /* Pods_RiffUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiffUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A78FB56210F3B7100D680AA /* Brothers-Lands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brothers-Lands.ttf"; path = "../../../../Library/Fonts/Brothers-Lands.ttf"; sourceTree = "<group>"; };
+		9A78FB582110454D00D680AA /* YourGifVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGifVC.swift; sourceTree = "<group>"; };
+		9A78FB5A2110456100D680AA /* RiffsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiffsVC.swift; sourceTree = "<group>"; };
 		A577C87F225D793A1703560E /* Pods-Riff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Riff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Riff/Pods-Riff.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3A3524210B5EB300BB7E9D /* Riff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF3A3529210B5EB300BB7E9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF3A3529210B5EB300BB7E9D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		AF3A352C210B5EB300BB7E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF3A352E210B5EB300BB7E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3A3531210B5EB300BB7E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,12 +118,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9A78FB55210F3AF100D680AA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9A78FB56210F3B7100D680AA /* Brothers-Lands.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AF3A351B210B5EB300BB7E9D = {
 			isa = PBXGroup;
 			children = (
 				AF3A3526210B5EB300BB7E9D /* Riff */,
 				AF3A353B210B5EB300BB7E9D /* RiffTests */,
 				AF3A3546210B5EB400BB7E9D /* RiffUITests */,
+				9A78FB55210F3AF100D680AA /* Fonts */,
 				AF3A3525210B5EB300BB7E9D /* Products */,
 				58638A24664D1B567EF23022 /* Pods */,
 				341EEAE0E1CBA77B9ED8D706 /* Frameworks */,
@@ -138,7 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */,
-				AF3A3529210B5EB300BB7E9D /* ViewController.swift */,
+				AF3A3529210B5EB300BB7E9D /* HomeVC.swift */,
+				9A78FB582110454D00D680AA /* YourGifVC.swift */,
+				9A78FB5A2110456100D680AA /* RiffsVC.swift */,
 				AF3A352B210B5EB300BB7E9D /* Main.storyboard */,
 				AF3A352E210B5EB300BB7E9D /* Assets.xcassets */,
 				AF3A3530210B5EB300BB7E9D /* LaunchScreen.storyboard */,
@@ -275,6 +292,7 @@
 			files = (
 				AF3A3532210B5EB300BB7E9D /* LaunchScreen.storyboard in Resources */,
 				AF3A352F210B5EB300BB7E9D /* Assets.xcassets in Resources */,
+				9A78FB57210F3B7100D680AA /* Brothers-Lands.ttf in Resources */,
 				AF3A352D210B5EB300BB7E9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,8 +395,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3A352A210B5EB300BB7E9D /* ViewController.swift in Sources */,
+				AF3A352A210B5EB300BB7E9D /* HomeVC.swift in Sources */,
 				AF3A3528210B5EB300BB7E9D /* AppDelegate.swift in Sources */,
+				9A78FB592110454D00D680AA /* YourGifVC.swift in Sources */,
+				9A78FB5B2110456100D680AA /* RiffsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +574,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Riff/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plushRepublic.Riff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -569,7 +592,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Riff/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plushRepublic.Riff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -585,7 +611,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RiffTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plushRepublic.RiffTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -602,7 +632,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RiffTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plushRepublic.RiffTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -618,7 +652,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RiffUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plushRepublic.RiffUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -634,7 +672,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RiffUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plushRepublic.RiffUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
