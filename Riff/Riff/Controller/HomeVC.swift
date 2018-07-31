@@ -40,7 +40,6 @@ class HomeVC: UIViewController {
         btnMale.layer.masksToBounds = true
         btnFemale.layer.cornerRadius = btnFemale.frame.size.height / 2
         btnMale.layer.cornerRadius = btnMale.frame.size.height / 2
-        
     }
     
     

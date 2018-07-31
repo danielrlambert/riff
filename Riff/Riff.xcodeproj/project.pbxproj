@@ -12,13 +12,13 @@
 		9A78FB602110536600D680AA /* RiffsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB5D2110536600D680AA /* RiffsVC.swift */; };
 		9A78FB612110536600D680AA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB5E2110536600D680AA /* HomeVC.swift */; };
 		9A78FB622110536600D680AA /* YourGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB5F2110536600D680AA /* YourGifVC.swift */; };
-		9A78FB65211053F900D680AA /* Brothers-Lands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A78FB64211053F900D680AA /* Brothers-Lands.ttf */; };
 		AF3A3528210B5EB300BB7E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */; };
-		AF3A352D210B5EB300BB7E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3A352B210B5EB300BB7E9D /* Main.storyboard */; };
 		AF3A352F210B5EB300BB7E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3A352E210B5EB300BB7E9D /* Assets.xcassets */; };
-		AF3A3532210B5EB300BB7E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3A3530210B5EB300BB7E9D /* LaunchScreen.storyboard */; };
 		AF3A353D210B5EB300BB7E9D /* RiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A353C210B5EB300BB7E9D /* RiffTests.swift */; };
 		AF3A3548210B5EB400BB7E9D /* RiffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A3547210B5EB400BB7E9D /* RiffUITests.swift */; };
+		AFF3C6FE2110579500F7A057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF3C6FA2110579500F7A057 /* LaunchScreen.storyboard */; };
+		AFF3C6FF2110579500F7A057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF3C6FC2110579500F7A057 /* Main.storyboard */; };
+		AFF3C703211057D900F7A057 /* Brothers-Lands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFF3C702211057D900F7A057 /* Brothers-Lands.ttf */; };
 		CE33702BEB5488A4BADCAB6C /* Pods_RiffTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFF9262D89CD8DB551286D5 /* Pods_RiffTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,13 +49,10 @@
 		9A78FB5D2110536600D680AA /* RiffsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffsVC.swift; sourceTree = "<group>"; };
 		9A78FB5E2110536600D680AA /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9A78FB5F2110536600D680AA /* YourGifVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourGifVC.swift; sourceTree = "<group>"; };
-		9A78FB64211053F900D680AA /* Brothers-Lands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brothers-Lands.ttf"; sourceTree = "<group>"; };
 		A577C87F225D793A1703560E /* Pods-Riff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Riff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Riff/Pods-Riff.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3A3524210B5EB300BB7E9D /* Riff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF3A352C210B5EB300BB7E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF3A352E210B5EB300BB7E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF3A3531210B5EB300BB7E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF3A3533210B5EB300BB7E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF3A3538210B5EB300BB7E9D /* RiffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3A353C210B5EB300BB7E9D /* RiffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiffTests.swift; sourceTree = "<group>"; };
@@ -63,6 +60,9 @@
 		AF3A3543210B5EB400BB7E9D /* RiffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3A3547210B5EB400BB7E9D /* RiffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiffUITests.swift; sourceTree = "<group>"; };
 		AF3A3549210B5EB400BB7E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF3C6FB2110579500F7A057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFF3C6FD2110579500F7A057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFF3C702211057D900F7A057 /* Brothers-Lands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brothers-Lands.ttf"; sourceTree = "<group>"; };
 		EB81F2CA2E254C12BCE23CBF /* Pods-RiffTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiffTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiffTests/Pods-RiffTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC854FC990DDDAAB2DFCB76D /* Pods_Riff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Riff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,19 +121,11 @@
 		9A78FB5C2110536600D680AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A78FB5D2110536600D680AA /* RiffsVC.swift */,
 				9A78FB5E2110536600D680AA /* HomeVC.swift */,
+				9A78FB5D2110536600D680AA /* RiffsVC.swift */,
 				9A78FB5F2110536600D680AA /* YourGifVC.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		9A78FB632110537600D680AA /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				9A78FB64211053F900D680AA /* Brothers-Lands.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AF3A351B210B5EB300BB7E9D = {
@@ -163,11 +155,10 @@
 			children = (
 				AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */,
 				9A78FB5C2110536600D680AA /* Controller */,
-				AF3A352B210B5EB300BB7E9D /* Main.storyboard */,
+				AFF3C6F92110579500F7A057 /* Storyboards */,
+				AFF3C700211057D900F7A057 /* Files */,
 				AF3A352E210B5EB300BB7E9D /* Assets.xcassets */,
-				AF3A3530210B5EB300BB7E9D /* LaunchScreen.storyboard */,
 				AF3A3533210B5EB300BB7E9D /* Info.plist */,
-				9A78FB632110537600D680AA /* Fonts */,
 			);
 			path = Riff;
 			sourceTree = "<group>";
@@ -188,6 +179,31 @@
 				AF3A3549210B5EB400BB7E9D /* Info.plist */,
 			);
 			path = RiffUITests;
+			sourceTree = "<group>";
+		};
+		AFF3C6F92110579500F7A057 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AFF3C6FA2110579500F7A057 /* LaunchScreen.storyboard */,
+				AFF3C6FC2110579500F7A057 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AFF3C700211057D900F7A057 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFF3C701211057D900F7A057 /* Fonts */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		AFF3C701211057D900F7A057 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AFF3C702211057D900F7A057 /* Brothers-Lands.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +314,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3A3532210B5EB300BB7E9D /* LaunchScreen.storyboard in Resources */,
+				AFF3C6FE2110579500F7A057 /* LaunchScreen.storyboard in Resources */,
 				AF3A352F210B5EB300BB7E9D /* Assets.xcassets in Resources */,
-				9A78FB65211053F900D680AA /* Brothers-Lands.ttf in Resources */,
-				AF3A352D210B5EB300BB7E9D /* Main.storyboard in Resources */,
+				AFF3C703211057D900F7A057 /* Brothers-Lands.ttf in Resources */,
+				AFF3C6FF2110579500F7A057 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,20 +458,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF3A352B210B5EB300BB7E9D /* Main.storyboard */ = {
+		AFF3C6FA2110579500F7A057 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF3A352C210B5EB300BB7E9D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AF3A3530210B5EB300BB7E9D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF3A3531210B5EB300BB7E9D /* Base */,
+				AFF3C6FB2110579500F7A057 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AFF3C6FC2110579500F7A057 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFF3C6FD2110579500F7A057 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
