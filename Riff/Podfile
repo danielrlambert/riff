@@ -8,6 +8,7 @@ target 'Riff' do
   # Pods for Riff
   
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 
   target 'RiffTests' do

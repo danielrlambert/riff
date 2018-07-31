@@ -16,9 +16,11 @@
 		AF3A352F210B5EB300BB7E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3A352E210B5EB300BB7E9D /* Assets.xcassets */; };
 		AF3A353D210B5EB300BB7E9D /* RiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A353C210B5EB300BB7E9D /* RiffTests.swift */; };
 		AF3A3548210B5EB400BB7E9D /* RiffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A3547210B5EB400BB7E9D /* RiffUITests.swift */; };
+		AF5E6F6D21107C23004D8562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E6F6C21107C23004D8562 /* Constants.swift */; };
 		AFF3C6FE2110579500F7A057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF3C6FA2110579500F7A057 /* LaunchScreen.storyboard */; };
 		AFF3C6FF2110579500F7A057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF3C6FC2110579500F7A057 /* Main.storyboard */; };
 		AFF3C703211057D900F7A057 /* Brothers-Lands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFF3C702211057D900F7A057 /* Brothers-Lands.ttf */; };
+		AFF3C7052110766700F7A057 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF3C7042110766600F7A057 /* GoogleService-Info.plist */; };
 		CE33702BEB5488A4BADCAB6C /* Pods_RiffTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFF9262D89CD8DB551286D5 /* Pods_RiffTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,9 +62,11 @@
 		AF3A3543210B5EB400BB7E9D /* RiffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3A3547210B5EB400BB7E9D /* RiffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiffUITests.swift; sourceTree = "<group>"; };
 		AF3A3549210B5EB400BB7E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5E6F6C21107C23004D8562 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFF3C6FB2110579500F7A057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFF3C6FD2110579500F7A057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF3C702211057D900F7A057 /* Brothers-Lands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brothers-Lands.ttf"; sourceTree = "<group>"; };
+		AFF3C7042110766600F7A057 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB81F2CA2E254C12BCE23CBF /* Pods-RiffTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiffTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiffTests/Pods-RiffTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC854FC990DDDAAB2DFCB76D /* Pods_Riff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Riff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				9A78FB5E2110536600D680AA /* HomeVC.swift */,
-				9A78FB5D2110536600D680AA /* RiffsVC.swift */,
 				9A78FB5F2110536600D680AA /* YourGifVC.swift */,
+				9A78FB5D2110536600D680AA /* RiffsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,10 +159,12 @@
 			children = (
 				AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */,
 				9A78FB5C2110536600D680AA /* Controller */,
+				AF5E6F6B21107C03004D8562 /* Helpers */,
 				AFF3C6F92110579500F7A057 /* Storyboards */,
 				AFF3C700211057D900F7A057 /* Files */,
 				AF3A352E210B5EB300BB7E9D /* Assets.xcassets */,
 				AF3A3533210B5EB300BB7E9D /* Info.plist */,
+				AFF3C7042110766600F7A057 /* GoogleService-Info.plist */,
 			);
 			path = Riff;
 			sourceTree = "<group>";
@@ -179,6 +185,14 @@
 				AF3A3549210B5EB400BB7E9D /* Info.plist */,
 			);
 			path = RiffUITests;
+			sourceTree = "<group>";
+		};
+		AF5E6F6B21107C03004D8562 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF5E6F6C21107C23004D8562 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		AFF3C6F92110579500F7A057 /* Storyboards */ = {
@@ -316,6 +330,7 @@
 			files = (
 				AFF3C6FE2110579500F7A057 /* LaunchScreen.storyboard in Resources */,
 				AF3A352F210B5EB300BB7E9D /* Assets.xcassets in Resources */,
+				AFF3C7052110766700F7A057 /* GoogleService-Info.plist in Resources */,
 				AFF3C703211057D900F7A057 /* Brothers-Lands.ttf in Resources */,
 				AFF3C6FF2110579500F7A057 /* Main.storyboard in Resources */,
 			);
@@ -382,11 +397,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Riff/Pods-Riff-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5E6F6D21107C23004D8562 /* Constants.swift in Sources */,
 				9A78FB622110536600D680AA /* YourGifVC.swift in Sources */,
 				9A78FB612110536600D680AA /* HomeVC.swift in Sources */,
 				AF3A3528210B5EB300BB7E9D /* AppDelegate.swift in Sources */,

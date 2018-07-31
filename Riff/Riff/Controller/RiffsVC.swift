@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class RiffsVC: UIViewController {
     
@@ -15,7 +17,7 @@ class RiffsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadAllRiffs()
     }
     
     // MARK: - Notification Methods
@@ -23,6 +25,28 @@ class RiffsVC: UIViewController {
     // MARK: - Public Methods
     
     // MARK: - Custom Methods
+    
+    private func loadAllRiffs() {
+//        appDelegate.ref.child(Constants.RiffKeys.riff).observeSingleEvent(of: .value) { [weak self] (snapshot) in
+//            guard let me = self else { return }
+//
+//            for child in snapshot.children {
+//                if let riff = child.value as? Dictionary<String, String> {
+//
+//                }
+//            }
+//
+//            guard let arrRiffs = snapshot.value as? [DataSnapshot] else {
+//                return
+//            }
+//            
+//            for riff in arrRiffs {
+//                if let dictRiff = riff as? Dictionary<String, String> {
+//                    print(dictRiff)
+//                }
+//            }
+//        }
+    }
     
     // MARK: - API Methods
     

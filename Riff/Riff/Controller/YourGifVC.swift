@@ -33,7 +33,7 @@ class YourGifVC: UIViewController {
     }
     
     @IBAction func btnBackAction(_ sender: UIButton) {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func btnSeeOtherRiffsAction(_ sender: UIButton) {

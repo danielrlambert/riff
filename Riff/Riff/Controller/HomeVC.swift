@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class HomeVC: UIViewController {
     
@@ -49,7 +51,12 @@ class HomeVC: UIViewController {
     // MARK: - Action Methods
     
     @IBAction func btnSubmitAction(_ sender: UIButton) {
-        
+        let riffItem = [
+            Constants.RiffKeys.gender  : "male",
+            Constants.RiffKeys.age     : "21",
+            Constants.RiffKeys.status  : "Hey, I am happy",
+        ]
+        appDelegate.ref.child(Constants.RiffKeys.riff).childByAutoId().setValue(riffItem)
     }
     
     @IBAction func btnFemaleAction(_ sender: UIButton) {
