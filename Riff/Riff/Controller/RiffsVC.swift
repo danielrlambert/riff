@@ -27,25 +27,28 @@ class RiffsVC: UIViewController {
     // MARK: - Custom Methods
     
     private func loadAllRiffs() {
-//        appDelegate.ref.child(Constants.RiffKeys.riff).observeSingleEvent(of: .value) { [weak self] (snapshot) in
-//            guard let me = self else { return }
-//
-//            for child in snapshot.children {
-//                if let riff = child.value as? Dictionary<String, String> {
-//
-//                }
-//            }
-//
-//            guard let arrRiffs = snapshot.value as? [DataSnapshot] else {
-//                return
-//            }
-//            
-//            for riff in arrRiffs {
-//                if let dictRiff = riff as? Dictionary<String, String> {
-//                    print(dictRiff)
-//                }
-//            }
-//        }
+        appDelegate.ref.child(Constants.RiffKeys.riff).observeSingleEvent(of: .value) { [weak self] (snapshot) in
+            guard let me = self else { return }
+            
+            for data in snapshot.children {
+                if let dataRiff = data as? DataSnapshot {
+                    if var dictRiff = dataRiff.value as? [String: AnyObject] {
+                        //TODO: Aici iti vin dictionare cu toate riffurile din database
+                        /*
+                         ["riff_status": Hey, I am happy, "riff_gender": male, "riff_age": 21]
+                         ["riff_status": Hey, I am happy, "riff_gender": male, "riff_age": 21]
+                         ["riff_status": Hey, I am happy, "riff_gender": male, "riff_age": 21]
+                         ["riff_status": Hey, I am happy, "riff_gender": male, "riff_age": 21]
+                         ["riff_status": Hey, I am happy, "riff_gender": male, "riff_age": 21]
+                         ["riff_status": Hey, I am happy, "riff_gender": male, "riff_age": 21]
+                         */
+                        
+                        // Creezi o clasa, Riff, si le pastrezi in tabelu de aici, cu obiecte de tipul Riff
+                        print(dictRiff)
+                    }
+                }
+            }
+        }
     }
     
     // MARK: - API Methods
@@ -59,3 +62,5 @@ class RiffsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+

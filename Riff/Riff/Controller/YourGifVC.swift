@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GiphyCoreSDK
 
 class YourGifVC: UIViewController {
     
@@ -23,6 +24,26 @@ class YourGifVC: UIViewController {
     // MARK: - Public Methods
     
     // MARK: - Custom Methods
+    
+    private func getAllGiphysForSearchText(strSearch: String) {
+        /// Gif Search
+        GiphyCore.shared.search("cats") { (response, error) in
+            
+            if let error = error as NSError? {
+                // Do what you want with the error
+            }
+            
+            if let response = response, let data = response.data, let pagination = response.pagination {
+                print(response.meta)
+                print(pagination)
+                for result in data {
+                    print(result)
+                }
+            } else {
+                print("No Results Found")
+            }
+        }
+    }
     
     // MARK: - API Methods
     
