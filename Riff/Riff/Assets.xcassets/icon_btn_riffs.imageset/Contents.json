@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "btn_back@2x.png",
+      "filename" : "icon_btn_riffs@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "btn_back@3x.png",
+      "filename" : "icon_btn_riffs@3x.png",
       "scale" : "3x"
     }
   ],

@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ref = Database.database().reference()
         
         // Configure your API Key
-        //GiphyCore.configure(apiKey: "YOUR_API_KEY")
+        GiphyCore.configure(apiKey: "o8T0u70VfjuuY2WVcYgA1CrlmqRDLO95")
         
         return true
     }

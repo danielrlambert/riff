@@ -12,6 +12,8 @@
 		9A78FB602110536600D680AA /* RiffsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB5D2110536600D680AA /* RiffsVC.swift */; };
 		9A78FB612110536600D680AA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB5E2110536600D680AA /* HomeVC.swift */; };
 		9A78FB622110536600D680AA /* YourGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78FB5F2110536600D680AA /* YourGifVC.swift */; };
+		9AC8F0C8211210D1004A458C /* RiffsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8F0C7211210D1004A458C /* RiffsCell.swift */; };
+		9AC8F0CB21121E45004A458C /* Riff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8F0CA21121E45004A458C /* Riff.swift */; };
 		AF3A3528210B5EB300BB7E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */; };
 		AF3A352F210B5EB300BB7E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3A352E210B5EB300BB7E9D /* Assets.xcassets */; };
 		AF3A353D210B5EB300BB7E9D /* RiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A353C210B5EB300BB7E9D /* RiffTests.swift */; };
@@ -51,6 +53,8 @@
 		9A78FB5D2110536600D680AA /* RiffsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffsVC.swift; sourceTree = "<group>"; };
 		9A78FB5E2110536600D680AA /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9A78FB5F2110536600D680AA /* YourGifVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourGifVC.swift; sourceTree = "<group>"; };
+		9AC8F0C7211210D1004A458C /* RiffsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiffsCell.swift; sourceTree = "<group>"; };
+		9AC8F0CA21121E45004A458C /* Riff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Riff.swift; sourceTree = "<group>"; };
 		A577C87F225D793A1703560E /* Pods-Riff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Riff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Riff/Pods-Riff.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3A3524210B5EB300BB7E9D /* Riff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,11 +129,28 @@
 		9A78FB5C2110536600D680AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9AC8F0C6211210B6004A458C /* Cell */,
 				9A78FB5E2110536600D680AA /* HomeVC.swift */,
 				9A78FB5F2110536600D680AA /* YourGifVC.swift */,
 				9A78FB5D2110536600D680AA /* RiffsVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9AC8F0C6211210B6004A458C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9AC8F0C7211210D1004A458C /* RiffsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9AC8F0C921121E32004A458C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9AC8F0CA21121E45004A458C /* Riff.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AF3A351B210B5EB300BB7E9D = {
@@ -159,6 +180,7 @@
 			children = (
 				AF3A3527210B5EB300BB7E9D /* AppDelegate.swift */,
 				9A78FB5C2110536600D680AA /* Controller */,
+				9AC8F0C921121E32004A458C /* Models */,
 				AF5E6F6B21107C03004D8562 /* Helpers */,
 				AFF3C6F92110579500F7A057 /* Storyboards */,
 				AFF3C700211057D900F7A057 /* Files */,
@@ -398,6 +420,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Riff/Pods-Riff-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GiphyCoreSDK/GiphyCoreSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -405,6 +428,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GiphyCoreSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -438,6 +462,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC8F0C8211210D1004A458C /* RiffsCell.swift in Sources */,
+				9AC8F0CB21121E45004A458C /* Riff.swift in Sources */,
 				AF5E6F6D21107C23004D8562 /* Constants.swift in Sources */,
 				9A78FB622110536600D680AA /* YourGifVC.swift in Sources */,
 				9A78FB612110536600D680AA /* HomeVC.swift in Sources */,

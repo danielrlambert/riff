@@ -10,6 +10,7 @@ target 'Riff' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'GiphyCoreSDK'
+  pod 'SwiftyGif',    '~> 4.1.0'
 
   target 'RiffTests' do
     inherit! :search_paths

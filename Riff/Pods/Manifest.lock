@@ -29,11 +29,13 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SwiftyGif (4.1.0)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - GiphyCoreSDK
+  - SwiftyGif (~> 4.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - leveldb-library
     - nanopb
+    - SwiftyGif
 
 SPEC CHECKSUMS:
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
@@ -57,7 +60,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
 
-PODFILE CHECKSUM: 868ea708cb2e1c2a47a50d9bf691218ae721bd4f
+PODFILE CHECKSUM: bb5196cb73cf544a0ee5fe0faf6771a11752cb04
 
 COCOAPODS: 1.5.3
