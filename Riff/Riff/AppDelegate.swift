@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import GiphyCoreSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         ref = Database.database().reference()
+        
+        // Configure your API Key
+        //GiphyCore.configure(apiKey: "YOUR_API_KEY")
         
         return true
     }
