@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import GiphyCoreSDK
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Configure your API Key
         GiphyCore.configure(apiKey: "o8T0u70VfjuuY2WVcYgA1CrlmqRDLO95")
+        
+        //=>    Enable Keyboard manager
+        IQKeyboardManager.sharedManager().enable = true
         
         return true
     }

@@ -23,6 +23,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
+  - IQKeyboardManagerSwift (5.0.8)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -35,10 +36,11 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - GiphyCoreSDK
+  - IQKeyboardManagerSwift (~> 5.0.8)
   - SwiftyGif (~> 4.1.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -46,6 +48,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - GiphyCoreSDK
     - GoogleToolboxForMac
+    - IQKeyboardManagerSwift
     - leveldb-library
     - nanopb
     - SwiftyGif
@@ -58,10 +61,11 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
   GiphyCoreSDK: 1278bfc2dbdc9f1b2b1703ee70224f515b9530a6
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
 
-PODFILE CHECKSUM: bb5196cb73cf544a0ee5fe0faf6771a11752cb04
+PODFILE CHECKSUM: 733d369b9972428dd536e68f4fcfe7d813e8befd
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

@@ -90,17 +90,18 @@ class HomeVC: UIViewController {
                 Constants.RiffKeys.status  : txvDescription.text!,
                 ] as [String : Any]
             
-            appDelegate.ref.child(Constants.RiffKeys.riff).childByAutoId().setValue(riffItem) { (error, snapshot) in
+            appDelegate.ref.child(Constants.RiffKeys.riff).childByAutoId().setValue(riffItem) { [weak self] (error, snapshot) in
+                guard let me = self else { return }
+                
                 if let err = error {
-                    let alert                = UIAlertController(title: "Oops", message: err as! String, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    let alert                = UIAlertController(title: "Oops", message: err.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    me.present(alert, animated: true, completion: nil)
                 }
                 else {
-                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "YourGifVC") as? YourGifVC
-                    vc?.yourStatus = self.txvDescription.text
-                    
-                    self.navigationController?.pushViewController(vc!, animated: true)
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "YourGifVC") as! YourGifVC
+                    vc.yourStatus = me.txvDescription.text
+                    me.navigationController?.pushViewController(vc, animated: true)
                 }
             }
         }

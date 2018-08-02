@@ -18,7 +18,7 @@ class YourGifVC: UIViewController {
     
     var yourStatus = ""
     
-    let gifManager = SwiftyGifManager(memoryLimit:50)
+    let gifManager = SwiftyGifManager(memoryLimit:20)
     
     // MARK: - View Lifecycle Methods
 
@@ -42,42 +42,49 @@ class YourGifVC: UIViewController {
         viewTop.layer.shadowColor = UIColor.darkGray.cgColor
         
         txvDescription.text = yourStatus
-
     }
     
-    private func getAllGiphysForSearchText(strSearch: String) {
-        /// Gif Search
-        GiphyCore.shared.search("cats") { (response, error) in
-            
-            if let error = error as NSError? {
-                // Do what you want with the error
-            }
-            
-            if let response = response, let data = response.data, let pagination = response.pagination {
-                print(response.meta)
-                print(pagination)
-                
-                if let gif = data.first {
-                    
-                    self.loadGif(url: gif.embedUrl!)
-                }
-                
-            } else {
-                print("No Results Found")
-            }
-        }
-    }
-    
-    private func loadGif(url: String) {
-        if let url = URL(string: url) {
+    private func loadGif(gif: GPHMedia) {
+        let strUrl = "https://media.giphy.com/media/\(gif.id)/giphy.gif"
+        if let url = URL(string: strUrl) {
             DispatchQueue.main.async {
                 // Always update UI on the main thread
-                self.imgvGiff.setGifFromURL(url, manager: self.gifManager, loopCount: -1, showLoader: true)
+                //self.imgvGiff.setGifFromURL(url, manager: self.gifManager, loopCount: -1, showLoader: true)
+                self.imgvGiff.setGifFromURL(url)
             }
         }
     }
     
     // MARK: - API Methods
+    
+    private func getAllGiphysForSearchText(strSearch: String) {
+        GiphyCore.shared.search(strSearch) { [weak self] (response, error) in
+            guard let me = self else { return }
+            
+            if let error = error as NSError? {
+                let alert                = UIAlertController(title: "Oops", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                me.present(alert, animated: true, completion: nil)
+                
+                return
+            }
+            
+            if let response = response,
+                let data = response.data {
+                //let pagination = response.pagination {
+                
+                if let gif = data.first {
+                    print(gif.description)
+                    me.loadGif(gif: gif)
+                }
+            }
+            else {
+                let alert                = UIAlertController(title: "Oops", message: "No gif available for your status", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                me.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
     
     // MARK: - Action Methods
     
