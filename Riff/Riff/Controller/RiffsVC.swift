@@ -27,6 +27,8 @@ class RiffsVC: UIViewController {
         setupUI()
     }
     
+    
+    
     // MARK: - Notification Methods
     
     // MARK: - Public Methods
@@ -39,6 +41,8 @@ class RiffsVC: UIViewController {
         viewTop.layer.shadowRadius = 2.0
         viewTop.layer.shadowColor = UIColor.darkGray.cgColor
     }
+    
+    
     
     private func loadAllRiffs() {
         appDelegate.ref.child(Constants.RiffKeys.riff).observeSingleEvent(of: .value) { [weak self] (snapshot) in
@@ -68,7 +72,7 @@ class RiffsVC: UIViewController {
     // MARK: - Action Methods
     
     @IBAction func btnBackAction(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - Memory Cleanup
@@ -105,6 +109,10 @@ extension UIColor {
     
     class func riffRed() -> UIColor {
         return UIColor(red: 244.0/255, green: 154.0/255, blue: 193/255, alpha: 1.0)
+    }
+    
+    class func riffBlue() -> UIColor {
+        return UIColor(red: 0/255, green: 144.0/255, blue: 200/255, alpha: 1.0)
     }
 }
 

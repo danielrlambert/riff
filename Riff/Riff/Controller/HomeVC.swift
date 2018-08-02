@@ -19,7 +19,13 @@ class HomeVC: UIViewController {
     @IBOutlet weak var btnFemale: UIButton!
     
     // MARK: - View Lifecycle Methods
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        resetValues()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +51,14 @@ class HomeVC: UIViewController {
         btnMale.layer.masksToBounds = true
         btnFemale.layer.cornerRadius = btnFemale.frame.size.height / 2
         btnMale.layer.cornerRadius = btnMale.frame.size.height / 2
+    }
+    
+    private func resetValues() {
+        txfAge.text = ""
+        txvDescription.text = ""
+        btnMale.isSelected = false
+        btnFemale.isSelected = false
+        
     }
     
     private func checkIfUserProfileDetailsFilledCorectly() -> Bool {
@@ -110,7 +124,7 @@ class HomeVC: UIViewController {
     
     @IBAction func btnFemaleAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        sender.backgroundColor = sender.isSelected ? .red : .clear
+        sender.backgroundColor = sender.isSelected ? .riffRed() : .clear
         
         btnMale.isSelected = false
         btnMale.backgroundColor = UIColor.clear
@@ -121,7 +135,7 @@ class HomeVC: UIViewController {
     
     @IBAction func btnMaleAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        sender.backgroundColor = sender.isSelected ? .blue : .clear
+        sender.backgroundColor = sender.isSelected ? .riffBlue() : .clear
         
         btnFemale.isSelected = false
         btnFemale.backgroundColor = UIColor.clear
@@ -136,4 +150,6 @@ class HomeVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+
 
