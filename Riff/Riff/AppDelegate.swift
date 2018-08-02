@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 import GiphyCoreSDK
 import IQKeyboardManagerSwift
+import Analytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,14 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
-        
         ref = Database.database().reference()
         
-        // Configure your API Key
+        //=>    Configure your API Key
         GiphyCore.configure(apiKey: "o8T0u70VfjuuY2WVcYgA1CrlmqRDLO95")
         
         //=>    Enable Keyboard manager
         IQKeyboardManager.sharedManager().enable = true
+        
+        //=>    Analytics segment.io setup
+        let config = SEGAnalyticsConfiguration.init(writeKey: "eG8wnJ2rnGS8m0yk2kuqKEAffk4cV4nJ")
+        config.trackApplicationLifecycleEvents = true
+        config.recordScreenViews = true
+        SEGAnalytics.setup(with: config)
         
         return true
     }

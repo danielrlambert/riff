@@ -12,6 +12,7 @@ target 'Riff' do
   pod 'GiphyCoreSDK'
   pod 'SwiftyGif',    '~> 4.1.0'
   pod 'IQKeyboardManagerSwift', '~> 5.0.8'
+  pod 'Analytics', '~> 3.0'
 
   target 'RiffTests' do
     inherit! :search_paths
