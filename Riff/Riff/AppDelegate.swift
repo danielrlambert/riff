@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var ref: DatabaseReference!
+    
+    var arrQuotes = [Quote]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -36,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.trackApplicationLifecycleEvents = true
         config.recordScreenViews = true
         SEGAnalytics.setup(with: config)
+        
+        //=>    Load Quotes
+        loadAllQuotes()
         
         return true
     }
@@ -60,6 +65,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: - Custom Methods
+    
+    private func loadAllQuotes() {
+        self.ref.child(Constants.RiffKeys.quotes).observeSingleEvent(of: .value) { [weak self] (snapshot) in
+            guard let me = self else { return }
+            
+            for data in snapshot.children {
+                if let dataQuote = data as? DataSnapshot {
+                    if var dictQuote = dataQuote.value as? [String: AnyObject] {
+                        
+                        var quote = Quote()
+                        quote.text           = dictQuote[Constants.RiffKeys.text] as? String
+                        quote.persona        = dictQuote[Constants.RiffKeys.person] as? String
+                        me.arrQuotes.append(quote)
+                    }
+                }
+            }
+        }
     }
 }
 

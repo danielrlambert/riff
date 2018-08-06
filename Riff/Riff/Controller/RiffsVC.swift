@@ -42,8 +42,6 @@ class RiffsVC: UIViewController {
         viewTop.layer.shadowColor = UIColor.darkGray.cgColor
     }
     
-    
-    
     private func loadAllRiffs() {
         appDelegate.ref.child(Constants.RiffKeys.riff).observeSingleEvent(of: .value) { [weak self] (snapshot) in
             guard let me = self else { return }
@@ -52,16 +50,23 @@ class RiffsVC: UIViewController {
                 if let dataRiff = data as? DataSnapshot {
                     if var dictRiff = dataRiff.value as? [String: AnyObject] {
                         
-                        let riff = Riff()
-                        riff.strGender = dictRiff[Constants.RiffKeys.gender] as? String
-                        riff.strAge = dictRiff[Constants.RiffKeys.age] as? String
-                        riff.strStatus = dictRiff[Constants.RiffKeys.status] as? String
+                        var riff = Riff()
+                        riff.strGender      = dictRiff[Constants.RiffKeys.gender] as? String
+                        riff.strAge         = dictRiff[Constants.RiffKeys.age] as? String
+                        riff.strStatus      = dictRiff[Constants.RiffKeys.status] as? String
                         
-                        me.arrRiffs.append(riff)
                         
+//                        if let strDate = dictRiff[Constants.RiffKeys.status] as? String {
+//                            riff.createdDate    = dateFromString(date: strDate, format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+//                        }
+                        
+                        //me.arrRiffs.append(riff)
+                        me.arrRiffs.insert(riff, at: 0)
                     }
                 }
             }
+            
+            
             
             me.tableView.reloadData()
         }
@@ -113,6 +118,16 @@ extension UIColor {
     
     class func riffBlue() -> UIColor {
         return UIColor(red: 0/255, green: 144.0/255, blue: 200/255, alpha: 1.0)
+    }
+}
+
+public func dateFromString(date: String, format: String) -> Date {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = format
+    if let date = dateFormatter.date(from: date) {
+        return date
+    } else {
+        return Date(timeIntervalSince1970: 0)
     }
 }
 

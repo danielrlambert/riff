@@ -8,12 +8,15 @@
 
 import Foundation
 
-class Riff {
-    
+struct Riff {
     var strGender                 : String?
     var strAge                    : String?
     var strStatus                 : String?
-    
-    
-    
+    var createdDate               = Date()
+}
+
+
+struct Quote {
+    var text                        : String?
+    var persona                     : String?
 }

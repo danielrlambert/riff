@@ -34,5 +34,10 @@ struct Constants {
         static let gender                           = "riff_gender"
         static let age                              = "riff_age"
         static let status                           = "riff_status"
+        static let createdDate                      = "riff_createdDate"
+        
+        static let quotes                           = "quotes"
+        static let text                             = "text"
+        static let person                           = "person"
     }
 }

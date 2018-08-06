@@ -6,14 +6,18 @@
 //  Copyright © 2018 Plush Republic, Inc. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import GiphyCoreSDK
 import SwiftyGif
+import Firebase
+import FirebaseDatabase
 
 class YourGifVC: UIViewController {
     
     @IBOutlet weak var viewTop: UIView!
-    @IBOutlet weak var txvDescription: UITextView!
+    @IBOutlet weak var lblQuoteText: UILabel!
+    @IBOutlet weak var lblQuotePersona: UILabel!
     @IBOutlet weak var imgvGiff: UIImageView!
     
     var yourStatus = ""
@@ -26,7 +30,7 @@ class YourGifVC: UIViewController {
         super.viewDidLoad()
 
         setupUI()
-        getAllGiphysForSearchText(strSearch: txvDescription.text)
+        getAllGiphysForSearchText(strSearch: yourStatus)
     }
     
     // MARK: - Notification Methods
@@ -41,7 +45,12 @@ class YourGifVC: UIViewController {
         viewTop.layer.shadowRadius = 2.0
         viewTop.layer.shadowColor = UIColor.darkGray.cgColor
         
-        txvDescription.text = yourStatus
+        //=>    Load random Quote
+        let countOfQuotes = appDelegate.arrQuotes.count
+        let x = arc4random_uniform(UInt32(countOfQuotes))
+        let quote = appDelegate.arrQuotes[Int(x)]
+        lblQuoteText.text = quote.text
+        lblQuotePersona.text = quote.persona
     }
     
     private func loadGif(gif: GPHMedia) {
