@@ -49,8 +49,8 @@ class YourGifVC: UIViewController {
         let countOfQuotes = appDelegate.arrQuotes.count
         let x = arc4random_uniform(UInt32(countOfQuotes))
         let quote = appDelegate.arrQuotes[Int(x)]
-        lblQuoteText.text = quote.text
-        lblQuotePersona.text = quote.persona
+        lblQuoteText.text = "\"\(quote.text ?? "")\""
+        lblQuotePersona.text = "-\(quote.persona ?? "")"
     }
     
     private func loadGif(gif: GPHMedia) {
